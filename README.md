@@ -1,5 +1,8 @@
 # Spy cam detection: Mobile Minder
 
+## Creators
+jennifernj, meganyyu, ammuiyer
+
 ## Inspiration
 South Korea is experiencing an epidemic of spy cams, positioned in public restrooms, hotel rooms, and other intimate locations to secretly record people's activities without their consent. Also known as “molka”, this problem is serious and growing: the police received over 6,400 illegal recording reports in 2017, an increase of 4,000 from 2012. It has also been the subject of public protests attended by tens of thousands proclaiming “my life is not your porn.” While the South Korean government has recognized the severity and urgency of this problem, their progress has been inhibited by the variable and clandestine tactics utilized by perpetrators. Spy cams can be hidden in everything from hair dryer stands to car keys to outlets, and the cybersecurity precautions taken by perpetrators complicates their detection. In the absence of a centralized and robust tool for detecting spy cams, affected citizens are left to rely on Android and iOS apps of questionable reliability that have received mixed reviews. In particular, these apps typically take advantage of only one mode of detection, usually light, thus lacking potential robustness that could be obtained by including sound, EMF, or RF interference.
 
