@@ -7,6 +7,10 @@ const int ledPin=11;
 const int buzzerPin = A1;
 int buttonState = 0;
 const int interval = 50;
+int cumSoundSum=0;
+int count=0;
+float sounds[interval];
+float lights[interval];
 QuickStats stats;
 
 void setup()
@@ -19,8 +23,7 @@ void setup()
 
 void loop()
 {
-    float sounds[interval];
-    float lights[interval];
+
     for (int j=0; j<interval; j++){
       buttonState = digitalRead(buttonPin);
       long sum = 0;
@@ -44,17 +47,21 @@ void loop()
       delay(10);
       sounds[j]=sum;
       lights[j]=light;
+      count++;
     }
 
     float soundStd=stats.stdev(sounds,interval);
     float lightStd=stats.stdev(lights,interval);
-    float soundAvg=stats.average(sounds,interval);
+    float soundSum=stats.average(sounds,interval)*interval;
     float lightAvg=stats.average(lights,interval);
+
+    cumSoundSum+=soundSum;
+    float currSoundAvg=cumSoundSum/count;
 
     int light = analogRead(A3);
     int sound = analogRead(pinAdc);
 
-    if ((sound>soundStd+soundAvg) && (light>lightStd+lightAvg)) {
+    if ((sound>soundStd+currSoundAvg) && (light>lightStd+lightAvg)) {
       digitalWrite(buzzerPin, HIGH);
     }
     else {
