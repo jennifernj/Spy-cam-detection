@@ -20,3 +20,7 @@ Throughout this hackathon, we tinkered with an Arduino Uno, developing a good se
 
 ## What's next for Mobile Minder
 We plan to prioritize our future efforts on finalizing our Electromagnetic Field and Radio Frequency sensors, which are relatively novel in this application but hold much promise. We also look forward to fine-tuning our statistical algorithms to improve the specificity and sensitivity of our models.
+
+## Notes on usage
+* Import QuickStats library through Arduino IDE
+
